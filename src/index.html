@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>图片批量下载神器</title>
+	<link href="index.css" rel="stylesheet" type="text/css" />
+	<link href="font/iconfont.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<webview style="top:0px;bottom:0px;left:0px;right:0px;position: absolute;background: red;z-index:-2;" src="about:blank" preload="./webview.js" ></webview>
+	<div style="top:0px;bottom:0px;left:0px;right:0px;position: absolute;background: #3b3f51;z-index:-1;"></div>
+	<div style="-webkit-app-region: drag;top:0;left:0;right:32px;height:40px;position: absolute;"></div>
+	<div class="progress"></div>
+	<img class="logo" src="wxd.png">
+	<form class="url-form" onsubmit="return false" action="##" method="post">
+		<input id="url" class="url" placeholder="https://目标网址" />
+		<input id="download-btn" class="button" type="submit" value="下载" onclick="download()"></input>
+	</form>
+	<div class="log">好乎出品 haohuu.com</div>
+	<div class="checkbox-group">
+		<input id="speedMode" type="checkbox" checked="checked" />极速模式
+		<input id="shopMode" type="checkbox" />电商模式
+	</div>
+	<div class="menu">
+		<i id="buy-btn" class="iconfont">购买(剩余试用<span id="testCnt">5</span>次)</i>
+		<i id="kefu-btn" class="iconfont">VIP客服微信fylparkour</i>
+		<i id="setdir" class="iconfont">设置输出目录</i>
+	</div>
+	<div class="buy" style="display:none;">
+		<img class="stopProp" src="wx.jpeg">
+		<p class="stopProp buy-tip">请添加微信好友购买 微信号:<b>fylparkour</b><br>激活码9元一个 激活后永久使用</p>
+		<p class="stopProp buy-code">机器码: <b id="macid">kong</b> <span id="copy-mac">复制</span></p>
+		<form class="stopProp code-form" onsubmit="return false" action="##" method="post">
+			<input id="code" class="url" placeholder="激活码" />
+			<input class="button" type="submit" value="激活" onclick="checkcode()"></input>
+		</form>
+	</div>
+	<div class="close-group">
+		<a class="close"></a>
+	</div>
+	
+</body>
+
+</html>
+
+<script src="page.js"></script>

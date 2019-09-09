@@ -1,0 +1,200 @@
+*{
+    box-sizing: border-box;
+    transition: all 0.16s 0s linear; /*所有CSS属性都拥有过渡属性，动画持续时间3s 延迟2s触发 linear的触发函数*/
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #3b3f51;
+    font-family: Arial, "Microsoft YaHei";
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+}
+
+.not-select{
+    -webkit-user-select: none;
+}
+
+.progress{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: #53c755;
+}
+
+.logo{
+    display: block;
+    width: 80px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    -webkit-app-region: drag;
+}
+
+.url-form{
+    /* width: 540px; */
+    position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.url{
+    background: #414658;
+    width: 86%;
+    height: 38px;
+    border: 0;
+    outline: none;
+    color: #f2f3f4;
+    font-size: 16px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.url::-webkit-input-placeholder{
+    color: #5e6171;
+}
+
+.button{
+    background: #53586d;
+    width: 14%;
+    border: 0;
+    outline: none;
+    height: 38px;
+    color: #f2f3f4;
+    font-size: 16px;
+    float: right;
+    cursor: pointer;
+}
+.button:hover{
+    background: #1fb922;
+}
+.button:active{
+    background: #53c755;
+}
+.button:disabled{
+    background: #53586d;
+}
+
+.log{
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+    overflow: auto;
+    text-align: center;
+    color: #5e6171;
+    font-size: 14px;
+    overflow-x:hidden;
+}
+.log::-webkit-scrollbar {
+    display:none
+}
+.log p{
+    margin: 0;
+}
+
+.checkbox-group{
+    color: #5e6171;
+    font-size: 12px;
+    text-align: center;
+    /* line-height: 20px; */
+}
+
+.menu{
+    position: absolute;
+    right: 10px;
+    bottom: 6px;
+}
+.menu i{
+    font-size: 14px;
+    color: #5e6171;
+    margin-right: 6px;
+    cursor: pointer;
+    font-style:normal
+}
+.menu i:hover{
+    color: #f2f3f4;
+}
+
+.menu .test{
+    color: #5e6171;
+    cursor: auto;
+}
+.menu .test:hover{
+    color: #5e6171;
+}
+
+.callback{
+    cursor: pointer;
+    color: #f2f3f4;
+}
+
+.buy{
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background: rgba(0,0,0,0.6);
+    text-align: center;
+    color: #f2f3f4;
+}
+.buy img{
+    display: block;
+    margin: auto;
+    width: 120px;
+    margin-top: 40px;
+}
+.buy-tip{
+    margin: 0;
+    margin: 10px;
+    font-size: 14px;
+}
+.buy-code{
+    margin: 0;
+    margin: 10px;
+    font-size: 14px;
+}
+.buy-code span{
+    color: rgb(64, 163, 255);
+    cursor: pointer;
+}
+
+.code-form{
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+/*关闭按钮*/
+.close-group{
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    width: 22px;
+    height: 22px;
+}
+.close {
+    width: 22px;
+    height: 22px;
+    position: relative;
+}
+
+.close:before, .close:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 22px;
+    height: 1px;
+    background-color: #888;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.close:after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
